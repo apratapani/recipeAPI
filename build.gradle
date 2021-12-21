@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.6.1'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id 'java-library'
 	id 'war'
 }
 
@@ -29,6 +30,11 @@ dependencies {
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
+wrapper {
+	gradleVersion = '6.3'
+	distributionType = Wrapper.DistributionType.ALL
+}
+
 
 test {
 	useJUnitPlatform()
